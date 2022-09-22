@@ -91,3 +91,7 @@ input#text {
 input#file {
     display: none;
 }
+
+#font-size {
+    width:30px;
+}

@@ -25,16 +25,28 @@
     <canvas>
     </canvas>
     <div class="btns">
-    <div>
+    <div class="brush-setting">
     Brush Size
     <input type="range" id="line-width" min="1" max="10"
     value="5" step="0.1">
     </div>
+    <form action="" class="text-setting">
+    Font Setting
+    <input type="text" id="font-size" value="50">
+    <select id="font-weight">
+        <option value="Bold">Bold</option>
+        <option value="Normal">Normal</option>
+    </select>
+    <select id="font-fill">
+        <option value="Fill">Fill</option>
+        <option value="Stroke">Stroke</option>
+    </select>
+    </form>
     <button id="mode-btn">Fill</button>
     <button id="destroy-btn">Destroy</button>
     <button id="eraser-btn">Erase</button>
     <label for="file">
-        Add photo
+        Add Photo
         <input type="file" id="file" accept="image/*">
     </label>
     <input type="text" placeholder="Add Text here...:)" id="text">
