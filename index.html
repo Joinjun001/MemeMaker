@@ -10,17 +10,26 @@
 <body>
     <div class="color-options">
         <input type="color" id="color">
-        <div class="color-option" style="background-color: #1abc9c;" data-color="#1abc9c"></div>
-        <div class="color-option" style="background-color: #3498db;" data-color="#3498db"></div>
-        <div class="color-option" style="background-color: #34495e;" data-color="#34495e"></div>
-        <div class="color-option" style="background-color: #27ae60;" data-color="#27ae60"></div>
-        <div class="color-option" style="background-color: #8e44ad;" data-color="#8e44ad"></div>
-        <div class="color-option" style="background-color: #f1c40f;" data-color="#f1c40f"></div>
-        <div class="color-option" style="background-color: #e74c3c;" data-color="#e74c3c"></div>
-        <div class="color-option" style="background-color: #95a5a6;" data-color="#95a5a6"></div>
-        <div class="color-option" style="background-color: #d35400;" data-color="#d35400"></div>
-        <div class="color-option" style="background-color: #2ecc71;" data-color="#2ecc71"></div>
-        <div class="color-option" style="background-color: #e67e22;" data-color="#e67e22"></div>
+        <div>
+            <div class="color-option" style="background-color: #FF0000;" data-color="#FF0000"></div>
+            <div class="color-option" style="background-color: #FF7800;" data-color="#FF7800"></div>
+            <div class="color-option" style="background-color: #FBFF00;" data-color="#FBFF00"></div>
+        </div>
+        <div>
+            <div class="color-option" style="background-color: #64FF00;" data-color="#64FF00"></div>
+            <div class="color-option" style="background-color: #27ae60;" data-color="#27ae60"></div>
+            <div class="color-option" style="background-color: #00C9FF;" data-color="#00C9FF"></div>
+        </div>
+        <div>
+            <div class="color-option" style="background-color: #000FFF;" data-color="#000FFF"></div>
+            <div class="color-option" style="background-color: #AE00FF;" data-color="#AE00FF"></div>
+            <div class="color-option" style="background-color: #000000;" data-color="#000000"></div>
+        </div>
+        <div>
+            <div class="color-option" style="background-color: #B2E0FF;" data-color="#B2E0FF"></div>
+            <div class="color-option" style="background-color: #FFFFFF;" data-color="#e67e22"></div>
+            <div class="color-option" style="background-color: #CEB2FF;" data-color="#CEB2FF"></div>
+        </div>
     </div>
     <canvas>
     </canvas>
@@ -40,6 +49,14 @@
     <select id="font-fill">
         <option value="Fill">Fill</option>
         <option value="Stroke">Stroke</option>
+    </select>
+    <select id="font-type">
+        <option value="serif">serif</option>
+        <option value="sans_serif">sans_serif</option>
+        <option value="monospace">monospace</option>
+        <option value="cursive">cursive</option>
+        <option value="fantasy">fantasy</option>
+        <option value="system_ui">system_ui</option>
     </select>
     </form>
     <button id="mode-btn">Fill</button>

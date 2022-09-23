@@ -1,6 +1,7 @@
 const fileInput = document.getElementById("file");
 const textInput = document.getElementById("text");
 
+const fontType = document.getElementById("font-type");
 const fontSize = document.getElementById("font-size");
 const fontWeight = document.getElementById("font-weight");
 const fontFill = document.getElementById("font-fill");
@@ -27,7 +28,6 @@ ctx.lineCap = "round";
 let isPainting = false;
 let isFilling = false;
 let isFontFilling = true;
-
 
 
 
@@ -120,7 +120,7 @@ function onDoubleClick(event) {
         
         const text = textInput.value;
         ctx.lineWidth = 1;
-        ctx.font = `${fontWeight.value} ${fontSize.value}px serif`;
+        ctx.font = `${fontWeight.value} ${fontSize.value}px ${fontType.value}`;
         ctx.fillText(text, event.offsetX, event.offsetY);
         
     }
@@ -128,7 +128,7 @@ function onDoubleClick(event) {
         
         const text = textInput.value;
         ctx.lineWidth = 1;
-        ctx.font = `${fontWeight.value} ${fontSize.value}px serif`;
+        ctx.font = `${fontWeight.value} ${fontSize.value}px ${fontType.value}`;
         ctx.strokeText(text, event.offsetX, event.offsetY);
         
     }
@@ -161,7 +161,9 @@ function onFontFillChange(event) {
         isFontFilling = false;
     }
 }
-
+function onFontTypeChange(event) {
+    ctx.fontType = event.target.value;
+}
 canvas.addEventListener("dblclick", onDoubleClick); 
 canvas.addEventListener("mousemove", onMove);
 canvas.addEventListener("mousedown", startPainting);
@@ -170,6 +172,7 @@ canvas.addEventListener("mouseleave", cancelPainting);
 canvas.addEventListener("click", onCanvasClick);
 
 lineWidth.addEventListener("change", onLineWidthChange);
+fontType.addEventListener("change", onFontTypeChange);
 fontSize.addEventListener("change", onFontSizeChange);
 fontWeight.addEventListener("change", onFontWeightChange);
 fontFill.addEventListener("change", onFontFillChange);
